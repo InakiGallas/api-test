@@ -8,10 +8,8 @@ server.use(express.json()); // Para parsear el cuerpo de la peticion en formato 
 
 //EndPoints --> Punto de Entrada
 //VERBOS: URL + Metodo HTTP (GET, POST, PUT, DELETE)
-//PUT -> Actualizar datos
-//DELETE -> Eliminar datos
-//PATCH -> Actualizar parcialmente datos
 
+// Array de peliculas
 const films = [
   { id: 1, title: "El Padrino", year: 1972 },
   { id: 2, title: "El Señor de los Anillos", year: 2001 },
