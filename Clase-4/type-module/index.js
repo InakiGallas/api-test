@@ -17,12 +17,12 @@ let dataApi;
 // getDataPromises()
 
 //async await
-async function getDataAsyncAwait(){
-    const data = await services.apiFetchAsyncAwait()
-    dataApi = data
-    return data
-}
-getDataAsyncAwait()
+// async function getDataAsyncAwait(){
+//     const data = await services.apiFetchAsyncAwait()
+//     dataApi = data
+//     return data
+// }
+// getDataAsyncAwait()
 
 //Servidor HTTP
 //Request -> Solicitud
