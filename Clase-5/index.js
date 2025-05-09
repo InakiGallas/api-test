@@ -18,6 +18,7 @@ const films = [
   { id: 5, title: "La Lista de Schindler", year: 1993 },
 ];
 
+
 //GET -> Obtener datos
 server.get("/", (req, res) => {
   res.send("Ruta Base"); // Respuesta al cliente
@@ -28,6 +29,8 @@ server.get("/", (req, res) => {
 server.get("/films", (req, res) => {
     res.send(films); // Respuesta al cliente
   });
+
+
 
 //GET -> Obtener datos  de una pelicula
 //:id -> Parametro de ruta
@@ -41,12 +44,16 @@ server.get("/films/:id", (req, res) => {
     res.send(element); // Respuesta al cliente
   });
 
+
+
 //POST -> Crear datos
 server.post("/films", (req, res) => {
   const newFilm = req.body; // Obtener el cuerpo de la peticion
   films.push(newFilm); // Agregar la nueva pelicula al array  
   res.send(newFilm); // Respuesta al cliente
 });
+
+
 
 //PUT -> Actualizar datos TOTAL
 server.put("/update/all/:id", (req, res) => {
@@ -61,6 +68,9 @@ server.put("/update/all/:id", (req, res) => {
   }
   res.send(data); // Respuesta al cliente
 })
+
+
+
  //PATCH -> Actualizar parcialmente datos
 server.patch("/update/:id", (req, res) => {
   const { id } = req.params; // Obtener el id de la pelicula
@@ -74,6 +84,9 @@ server.patch("/update/:id", (req, res) => {
     res.send(newFilm); // Respuesta al cliente
   }
 })
+
+
+
 //DELETE -> Eliminar datos
 server.delete("/delete/:id", (req, res) => {
   const { id } = req.params; // Obtener el id de la pelicula
@@ -84,8 +97,6 @@ server.delete("/delete/:id", (req, res) => {
     films.splice(index, 1); // Eliminar la pelicula del array
     res.status(200).send("La Pelicula fue eliminada correctamente"); // Respuesta al cliente
   }
- 
-  
 })
 
 
